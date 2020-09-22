@@ -83,3 +83,7 @@ d) Enter Govc Credentials for login
    - Please input your GOVC username 1 : xyz
    - GOVC password 1 : ****
 </code>
+
+
+Contributors:
+Vivek Sharma, Cody Yi, Junjie Lu 
