@@ -12,23 +12,20 @@ Agent-Status-Checker maintains multiple Ansible roles and modules that can be de
 
 
 ### Dependencies
- 1) For Windows:
- 
+
+1. For Windows:
     - Cygwin should be installed with following packages.
+        ```
+        - ansible >= 2.8.4
+        - python3 >= 3.6.10
+        - wget    >= 1.19.1
+        - pip     >= 20.2.3
+        ```
+    [Cygwin dowload](https://cygwin.com/install.html)  
 	
-      - ansible >= 2.8.4
-	  - python3 >= 3.6.10
-	  - wget    >= 1.19.1
-	  - pip     >= 20.2.3
-	  
-	[Cygwin dowload](https://cygwin.com/install.html)   
-	
-	
-  2) For Mac:
-  
-    - Latest Xcode should be installed.
-	
-	[https://developer.apple.com/downloads/index.action]
+2. For Mac:
+    
+    [Latest Xcode should be installed](https://developer.apple.com/downloads/index.action)
  
  
 ### Running Agent-Status-Checker:
@@ -41,49 +38,50 @@ unzip -d Agent-Status-Checker.zip
 
 ### Example
 
-1) Go to Agent-Status-Checker/AgentStatusChecker.
+1. Go to Agent-Status-Checker/AgentStatusChecker.
 
-<code>
-cd Agent-Status-Checker/AgentStatusChecker
-</code>
+    <code>cd Agent-Status-Checker/AgentStatusChecker</code>
+    
+2. Run install_me.sh
 
-2) Run install_me.sh
+    <code>sh install_me.sh</code>
 
-<code>
-sh install_me.sh
-</code>
+3. During script execuation it asks for some user input please follow the setup
 
-3) During script execuation it asks for some user input please follow the setup
+    1. Promt for confirmation of Satisfied dependencies
 
-<code>
-a) Promt for confirmation of Satisfied dependencies
+    2. Take User Credentials
 
-b) Take User Credentials
+        - Username with sudo access:  <code>foo</code>
+        - Password: <code>*****</code>
 
-  - Username with sudo access:  foo
-  - Password: *****
-
-c) After below message we have to enter password(please do not enter sudo password),please make sure password should be same for all three prompt.
-
-e.g
- - "Generate vault encrypted password from user credentials,Password should be same for all three prompt".
- - "Note: Please do not enter sudo password".
+    3. After below message we have to enter password(please do not enter sudo password),please make sure password should be same for all three prompt.
+       
+        e.g
+         - "Generate vault encrypted password from user credentials,Password should be same for all three prompt".
+         - "Note: Please do not enter sudo password".
+         
+           - Enter password(foo): <code>*****</code>
+           - New vault password (foo): <code>*****</code>
+           - Confirm new vault password (foo): <code>*****</code>
  
+    4. Enter Govc Credentials for login
 
-   - Enter password(foo): *****
-   - New vault password (foo): *****
-   - Confirm new vault password (foo): *****
+       - Please input the number of GOVC URLs: <code>X</code>
+       - Please input your GOVC IP 1 : <code>x.x.x.x</code>
+       - Please input your GOVC username 1 : <code>xyz</code>
+       - GOVC password 1 : <code>****</code>
 
- 
-d) Enter Govc Credentials for login
- 
+### Output Example
+ VMware Environment:
+![vmwareView](ExampleImage/vmwareView.png)
 
-   - Please input the number of GOVC URLs: X
-   - Please input your GOVC IP 1 : x.x.x.x
-   - Please input your GOVC username 1 : xyz
-   - GOVC password 1 : ****
-</code>
+ExcelSheet Output:
+![outputView](ExampleImage/outputView.png)
 
 
-Contributors:
+
+### Contributors
+```
 Vivek Sharma, Cody Yu, Junjie Lu 
+```
