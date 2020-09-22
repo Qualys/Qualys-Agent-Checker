@@ -86,4 +86,4 @@ d) Enter Govc Credentials for login
 
 
 Contributors:
-Vivek Sharma, Cody Yi, Junjie Lu 
+Vivek Sharma, Cody Yu, Junjie Lu 
