@@ -1,0 +1,38 @@
+Example to run Agent Status Checker:
+
+1. Go to the path Agent-Status-Checker/AgentStatusChecker/
+command:
+ cd Agent-Status-Checker/AgentStatusChecker/
+ 
+2. Run install_me.sh
+e.g 
+
+Agent-Status-Checker/AgentStatusChecker# sh install_me.sh
+
+During script execuation it asks for some user input please follow the setup
+
+a) Promt for confirmation of Satisfied dependencies
+
+b) Take User Credentials
+
+Username with sudo access:  foo
+Password: *****
+
+c) After below message we have to enter password(please do not enter sudo password),please make sure password should be same for all three prompt.
+
+e.g
+"Generate vault encrypted password from user credentials,Password should be same for all three prompt" "Note: Please do not enter sudo password"
+ 
+
+Enter password(foo): *****
+New vault password (foo): *****
+Confirm new vault password (foo): *****
+
+ 
+d).Enter Govc Credentials for login
+ 
+
+Please input the number of GOVC URLs: X
+Please input your GOVC IP 1 : x.x.x.x
+Please input your GOVC username 1 : xyz
+GOVC password 1 : ****

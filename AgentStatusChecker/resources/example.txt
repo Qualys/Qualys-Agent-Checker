@@ -1,0 +1,21 @@
+################################################################################################
+# Agent-Status-Checker maintains multiple Ansible roles and modules that can be deployed       #
+# to easily configure and manage various parts of the vmwarew and Linux infrastructure.        #
+#                                                                                              #
+#To run Agent-Status-Checker following are the dependencies:                                   #
+#                                                                                              #
+#1) For Windows:                                                                               #
+#   Cygwin should be installed with following packages                                         # 
+#   a) ansible >= 2.8.4                                                                        #
+#   b) python3 >= 3.6.10                                                                       #    
+#   c) wget    >= 1.19.1                                                                       # 
+#   d) pip     >= 20.2.3                                                                       #
+#                                                                                              # 
+#  To download and configure https://cygwin.com/install.html                                   #	      
+#											       #	 
+#2) For Mac:                                                                                   #
+# a) Latest Xcode should be installed                                                          #
+# To download and configure https://apps.apple.com/us/app/xcode/id497799835?mt=12              #
+#                                                                                              #
+#                                                                                              #
+################################################################################################
