@@ -158,9 +158,9 @@ def check_hosts():
 
     output_data = ''
 
-    print(('ansible-playbook %s  -i  %s --vault-id %s@%s'
+    print(('ansible-playbook %s  -i  %s -f 20 --vault-id %s@%s'
            % (yml_file_path, inv_file_path, l_user, vault_pass_path)))
-    os.system('ansible-playbook %s  -i  %s --vault-id %s@%s 2>&1 | tee %s'
+    os.system('ansible-playbook %s  -i  %s -f 20 --vault-id %s@%s 2>&1 | tee %s'
               % (yml_file_path, inv_file_path, l_user, vault_pass_path, tmp_output_path))
     lines = open(tmp_output_path).readlines()
     start = 0
