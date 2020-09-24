@@ -48,7 +48,7 @@ unzip -d Agent-Status-Checker.zip
     
 2. Run install_me.sh
 
-    <code>sh install_me.sh</code>
+    <code>bash install_me.sh  or ./install_me.sh</code>
 
 3. During script execuation it asks for some user input please follow the setup
 
