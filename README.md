@@ -2,6 +2,10 @@
 
 Agent-Status-Checker maintains multiple Ansible roles and modules that can be deployed to easily configure and manage various parts of the vmwarew and Linux infrastructure. Ansible roles & modules provide a method of modularizing your Ansible code, in other words; it enables you to break up large playbooks into smaller reusable files. This enables you to have a separate role for each component of the infrustructure, and allows you to reuse and share roles with other users. For more information about roles, see Creating Reusable Playbooks in the Ansible Documentation. Module and Roles included bunch of python codes, govc scripts, which help to generate dynamic inventory from vcenter and then getting agent status of all nodes and provided the except report.
 
+### Installation Comments
+
+The new Qualys Agent Checker open-source tool helps security teams and VMware admins work together to ensure the security and compliance of VMware environments. Agent Checker provides a common understanding of the instrumentation of VMware virtual machines by reporting Cloud Agent deployment status for all VMware vCenter-managed virtual machines. Security and admin teams can then identify gaps and ensure that Cloud Agent is installed and running on all VMware virtual machines, so that Qualys Cloud Platform can secure the entire environment.
+
 ### Currently we have implemented following Ansible roles:
 
 - <code>get.vm-inventory</code> - login to vCenter from via goVC and generate the VM inventory in csv or excel fromat. 
