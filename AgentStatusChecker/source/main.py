@@ -21,6 +21,8 @@ tmp_output_path = str((base_path / "../output/tmp.txt").resolve())
 txt_output_path = str((base_path / "../output/output.txt").resolve())
 vault_pass_path = str((base_path / "../resources/password_file").resolve())
 excel_render_path = str((base_path / "../source/excel_render.py").resolve())
+logo_path = str((base_path / "../resources/logo.jpg").resolve())
+
 
 template = '''- hosts: all
   gather_facts: False
@@ -158,9 +160,9 @@ def check_hosts():
 
     output_data = ''
 
-    print(('ansible-playbook %s  -i  %s -f 20 --vault-id %s@%s'
+    print(('ansible-playbook %s  -i  %s --vault-id %s@%s'
            % (yml_file_path, inv_file_path, l_user, vault_pass_path)))
-    os.system('ansible-playbook %s  -i  %s -f 20 --vault-id %s@%s 2>&1 | tee %s'
+    os.system('ansible-playbook %s  -i  %s --vault-id %s@%s 2>&1 | tee %s'
               % (yml_file_path, inv_file_path, l_user, vault_pass_path, tmp_output_path))
     lines = open(tmp_output_path).readlines()
     start = 0
@@ -223,7 +225,7 @@ def excel_render():
 
     # main function
     def main_render():
-        input_file_dir = '../output/output.txt'
+        input_file_dir = txt_output_path
         if os.path.exists(input_file_dir) == False:
             print("Warning: File {} not exists, please check!".format(input_file_dir))
             sys.exit()
@@ -274,7 +276,7 @@ def excel_render():
 
         # Create Cover sheet
         ws_output_cover = wb_output.create_sheet('Qualys Agent')
-        img = Image('../resources/logo.jpg')
+        img = Image(logo_path)
         img.width = 1800
         img.height = 920
         ws_output_cover.add_image(img, 'D2')
@@ -327,8 +329,8 @@ def excel_render():
         for i in range(ws_output_not_installed.max_column):
             for j in range(1, ws_output_not_installed.max_row):
                 ws_output_not_installed['%s%d' % (get_column_letter(i + 1), j + 1)].style = 'not_installed_style'
-
-        wb_output.save('../excel/' + output_file_name)
+        excel_path = str((base_path / "../excel/").resolve())
+        wb_output.save(excel_path + output_file_name)
 
     main_render()
 
