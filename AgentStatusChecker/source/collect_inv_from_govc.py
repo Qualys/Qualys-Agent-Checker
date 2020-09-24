@@ -44,9 +44,9 @@ def main():
     my_map_user = {}
     my_set = set()
     for i in range(1, int(l_num) + 1):
-        m_url = input('Please input your GOVC IP %s :' % i)
-        m_user = input('Please input your GOVC username %s :' % i)
-        m_password = getpass.getpass("GOVC password %s :" % i)
+        m_url = input('Please input your GOVC IP %s (vCenter):' % i)
+        m_user = input('Please input your GOVC username %s (vCenter):' % i)
+        m_password = getpass.getpass("GOVC password %s (vCenter):" % i)
         my_map_pass[m_url] = m_password
         my_map_user[m_url] = m_user
         print('WARNING: Please do not press any key. ')

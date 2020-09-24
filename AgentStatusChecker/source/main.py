@@ -330,7 +330,7 @@ def excel_render():
             for j in range(1, ws_output_not_installed.max_row):
                 ws_output_not_installed['%s%d' % (get_column_letter(i + 1), j + 1)].style = 'not_installed_style'
         excel_path = str((base_path / "../excel/").resolve())
-        wb_output.save(excel_path + output_file_name)
+        wb_output.save(excel_path + '/' + output_file_name)
 
     main_render()
 
