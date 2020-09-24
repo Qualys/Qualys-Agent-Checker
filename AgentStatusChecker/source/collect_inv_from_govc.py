@@ -49,7 +49,7 @@ def main():
         m_password = getpass.getpass("GOVC password %s :" % i)
         my_map_pass[m_url] = m_password
         my_map_user[m_url] = m_user
-
+        print('WARNING: Please do not press any key. ')
     for l_url in my_map_user.keys():
         l_user = my_map_user[l_url]
         l_password = my_map_pass[l_url]
@@ -67,6 +67,7 @@ def main():
         f.sort()
 
         yml_out = ''
+
         for line in f:
             for i in range(len(line) - 1, -1, -1):
                 if i < len(line) - 1 and line[i] == '/' and \
@@ -78,6 +79,7 @@ def main():
                     my_set.add(line[i + 1: len(line)])
                     new_out = new_out + line[i + 1: len(line)]
                     yml_out = yml_out + '    ' + line[i + 1: len(line)].strip() + ':\n'
+
                     break
 
         f = open((base_path / "../resources/inv_govc.txt").resolve(), 'a')
