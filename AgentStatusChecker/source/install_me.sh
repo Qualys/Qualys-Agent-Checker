@@ -57,7 +57,7 @@ function creds_take () {
   if [[ $getopt == y ]] || [[ $getopt == Y ]];
   then 
 	  echo "vault_pass" > "$RESOURCE"/password_file
-	  chmod -R 755 $RESOURCE
+	  chmod -R 755 $RESOURCE && chmod 666 $RESOURCE/password_file
 	  echo "" > $RESOURCE/install.log
 	  pre_check
 	  
