@@ -58,6 +58,7 @@ function creds_take () {
   then 
 	  echo "vault_pass" > "$RESOURCE"/password_file
 	  chmod -R 755 $RESOURCE && chmod 666 $RESOURCE/password_file
+	  chmod 777 $SRC/pkg_check.sh && chmod 777 $SRC/user_input.sh
 	  echo "" > $RESOURCE/install.log
 	  pre_check
 	  
