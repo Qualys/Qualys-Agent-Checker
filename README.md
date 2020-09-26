@@ -77,8 +77,8 @@ unzip -d Agent-Status-Checker.zip
        - GOVC password 1 : <code>****</code>
 
 ### Output Example
-VMware Environment: ![vmwareView](ExampleImage/vmwareView.png)
-ExcelSheet Output: ![outputView](ExampleImage/outputView.png)
+VMware Environment: ![vmwareView](ExampleImages/vmwareView.png)
+ExcelSheet Output: ![outputView](ExampleImages/outputView.png)
 
 
 ### Contributors
