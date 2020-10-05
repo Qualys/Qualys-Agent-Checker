@@ -17,20 +17,23 @@ Agent-Status-Checker maintains multiple Ansible roles and modules that can be de
 
 ### Dependencies
 
-1. For Windows:
+1. For Linux:
+    - Package Manager should be working
+	
+2. For Mac:
+    
+    [Latest Xcode should be installed](https://developer.apple.com/downloads/index.action)
+
+3. For Windows: (In progress)
     - Cygwin should be installed with following packages.
         ```
         - ansible >= 2.8.4
         - python3 >= 3.6.10
         - wget    >= 1.19.1
-        - pip     >= 20.2.3
+        - pip3     >= 20.2.3
         ```
-    [Cygwin dowload](https://cygwin.com/install.html)  
-	
-2. For Mac:
-    
-    [Latest Xcode should be installed](https://developer.apple.com/downloads/index.action)
- 
+    [Cygwin dowload](https://cygwin.com/install.html)
+
  
 ### Running Agent-Status-Checker:
 
@@ -77,9 +80,13 @@ unzip -d Agent-Status-Checker.zip
        - GOVC password 1 : <code>****</code>
 
 ### Output Example
-VMware Environment: ![vmwareView](ExampleImages/vmwareView.png)
-ExcelSheet Output: ![outputView](ExampleImages/outputView.png)
+##### VMware Environment: 
+![vmwareView](ExampleImages/vmwareView.png)
 
+##### ExcelSheet Output: 
+![outputView](ExampleImages/outputView.png)
+
+Agent Checker output showing VMware virtual machines with Cloud Agent running (left) and not installed (right).
 
 ### Contributors
 ```
