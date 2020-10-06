@@ -17,12 +17,15 @@ Agent-Status-Checker maintains multiple Ansible roles and modules that can be de
 
 ### Dependencies
 
+Agent Checker executes and retrieves data only for SSH-enabled VMs. SSH is typically enabled by default on Linux VMs but may not be enabled on Windows and other VMs. Cloud Agent status will be reported as Not Installed for VMs where SSH is not installed, regardless of actual Cloud Agent status.
+
+
 1. For Linux:
     - Package Manager should be working
 	
 2. For Mac:
     
-    [Latest Xcode should be installed](https://developer.apple.com/downloads/index.action)
+    - [Latest Xcode should be installed](https://developer.apple.com/downloads/index.action)
 
 3. For Windows: (In progress)
     - Cygwin should be installed with following packages.
@@ -32,8 +35,8 @@ Agent-Status-Checker maintains multiple Ansible roles and modules that can be de
         - wget    >= 1.19.1
         - pip3     >= 20.2.3
         ```
-    [Cygwin dowload](https://cygwin.com/install.html)
-
+        [Cygwin dowload](https://cygwin.com/install.html)
+    
  
 ### Running Agent-Status-Checker:
 
